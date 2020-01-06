@@ -26,12 +26,12 @@ public class CheckFile {
         return builder.toString();
     }
 
-    public static void main(String[] args) {
-        CheckFile chkFile = new CheckFile();
-        String name = chkFile.randomIdentifier();
-        System.out.println(name);
-
-    }
+//    public static void main(String[] args) {
+//        CheckFile chkFile = new CheckFile();
+//        String name = chkFile.randomIdentifier();
+//        System.out.println(name);
+//
+//    }
 
 
 }

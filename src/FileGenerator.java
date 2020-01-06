@@ -12,9 +12,9 @@ public class FileGenerator {
     private static File root = new File("./");
     private final String fileName;
     private final int lines;
-    final String lexicon = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12345674890";
-    final java.util.Random rand = new java.util.Random();
-    final Set<String> identifiers = new HashSet<String>();
+//    final String lexicon = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12345674890";
+//    final java.util.Random rand = new java.util.Random();
+//    final Set<String> identifiers = new HashSet<String>();
 
     public FileGenerator(String fileName, int lineCount){
         this.fileName = fileName;
@@ -40,7 +40,6 @@ public class FileGenerator {
 
         Scanner scanner = new Scanner(new File("fileNames.txt"));
         List<String> myList = new ArrayList<>();
-
         while(scanner.hasNext()){
             myList.add(scanner.nextLine());
         }
@@ -49,11 +48,10 @@ public class FileGenerator {
 
         FileGenerator fg = new FileGenerator(name, result);
         try {
-
             fg.randomfileGenerator();
             File file = new File(fg.fileName);
             double bytes = file.length();
-            System.out.println(bytes);
+            System.out.println(fg.fileName+" "+bytes);
 //            System.out.println(cfg.getSHA());
         } catch (IOException e) {
             e.printStackTrace();
